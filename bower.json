@@ -1,0 +1,28 @@
+{
+  "name": "churchdesk_challenge",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "souhail.razzouk@hotmail.com"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "homepage": "",
+  "ignore": [
+    "bin/**/.*",
+    "node_modules",
+    "bower_components",
+    "bin/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "winjs": "^4.4.0",
+    "angular-winjs": "^4.4.0",
+    "angular": "1.4.0",
+    "angular-route": "1.4.0"
+  }
+}

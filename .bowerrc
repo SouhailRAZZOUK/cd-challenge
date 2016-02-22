@@ -1,0 +1,5 @@
+{
+  "directory": "bin/assets/components",
+  "analytics": false,
+  "timeout": 120000
+}
