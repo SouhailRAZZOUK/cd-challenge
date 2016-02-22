@@ -47,4 +47,4 @@ gulp.task('connect', ['watch'], function() {
 	});
 });
 
-gulp.task('default', ['jade','sass','connect']);
+gulp.task('default', ['jade','sass','js','connect']);
