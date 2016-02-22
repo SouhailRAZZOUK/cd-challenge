@@ -12,7 +12,7 @@ mixin main
   html(ng-app="churchdeskchallenge")
     head
       include head
-    body
+    body(ng-controller="usersCtrl")
    
       if block
         block
