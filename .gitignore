@@ -3,5 +3,7 @@ dist
 .tmp
 .sass-cache
 *.map
+bower_components
 bin/*
 bin/assets/components
+npm-debug.log
