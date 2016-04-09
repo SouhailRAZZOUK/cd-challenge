@@ -1,0 +1,32 @@
+div.user-profile.row
+
+  .general-infos.col-xs-3
+    img(ng-src!="{{user.avatar_url}}")
+    .titles
+      h2.win-h2 {{user.name}} ({{'@'+user.login}})
+      a.win-link(target!="_blank", href!="{{user.html_url}}") {{user.html_url}}
+    .infos
+      hr
+      h3.win-h3 Blog:
+      a.win-link(href!="{{user.blog}}") {{user.blog}}
+      h3.win-h3 Location
+      .win-type-caption {{user.location}}
+  .details.col-xs-9
+    win-pivot
+      win-pivot-item(header!="'Followers(' + user.followers + ')'")
+        win-list-view#FollowersListView(item-data-source="user.followersList")
+          win-item-template 
+            div.follower 
+              img(ng-src!="{{item.data.avatar_url}}")
+              h6 {{item.data.login}}
+          win-grid-layout
+          
+        
+      win-pivot-item(header="'Following(' + user.following + ')'")
+        win-list-view#FollowingLi4stView(item-data-source="user.followingList")
+          win-item-template 
+            div.followed
+              img(ng-src!="{{item.data.avatar_url}}")
+              h6 {{item.data.name}}
+          win-grid-layout
+          

@@ -1,5 +1,5 @@
-div.userItem(ng-click="getUserDetails()")
+div.userItem(ng-click!="getUserDetails(item.data.login)")
   img(ng-src!="{{item.data.avatar_url}}")
   div.description
     h4.win-h4 {{item.data.login}}
-    h6.win-h6 {{item.data.url}}
+    h6.win-h6 {{item.data.html_url}}

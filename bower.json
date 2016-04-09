@@ -23,6 +23,8 @@
     "winjs": "^4.4.0",
     "angular-winjs": "^4.4.0",
     "angular": "1.4.0",
-    "angular-route": "1.4.0"
+    "angular-route": "1.4.0",
+    "angular-resource": "1.4.0",
+    "flexboxgrid": "^6.3.0"
   }
 }

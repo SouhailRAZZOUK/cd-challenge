@@ -1,9 +1,10 @@
-var gulp        = require('gulp'),
-    gutil       = require('gulp-util'),
-    sass        = require('gulp-sass'),
-    jade        = require('gulp-jade'),
-    connect     = require('gulp-connect'),
-    del         = require('del');
+var gulp                = require('gulp'),
+    gutil               = require('gulp-util'),
+    sass                = require('gulp-sass'),
+    jade                = require('gulp-jade'),
+    connect             = require('gulp-connect'),
+    del                 = require('del'),
+    historyApiFallback  = require('connect-history-api-fallback');
 
 
 gulp.task('sass', function() {
@@ -37,14 +38,34 @@ gulp.task('clean', function () {
 gulp.task('watch', function () {
   gulp.watch('src/assets/styles/*.scss',['sass']);
   gulp.watch('src/**/*.jade',['jade']);
+  gulp.watch('src/**/*.js',['js']);
 });
 
 gulp.task('connect', ['watch'], function() {
 	connect.server({
 		root: "bin/",
     port: 4000,
-		livereload: true
+		livereload: true,
+    middleware: function(connect, opt) {
+      return [historyApiFallback({
+                index: '/index.html'
+              })];
+    }
 	});
 });
+/*
 
+gulp.task('connect', function() {
+  connect.server({
+    root: __dirname,
+    livereload: true,
+
+    middleware: function(connect, opt) {
+      return [ historyApiFallback ];
+    }
+
+  });
+});
+
+*/
 gulp.task('default', ['jade','sass','js','connect']);

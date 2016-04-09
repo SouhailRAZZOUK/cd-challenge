@@ -4,8 +4,11 @@ body{
   height: 100%;
 }
 
-#UsersListView{
+body{
+  padding: 20px 15px 0;
+}
 
+#UsersListView{
   margin: 30px auto 0;
   
   .win-container{
@@ -26,4 +29,27 @@ body{
     }
   }
 
+}
+
+.user-profile{
+  margin-top: 30px;
+    
+  .general-infos{
+    img{
+      width: 200px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+  }
+  
+  // #FollwersListView{
+  //   width: 100%;
+  //   .follower{
+  //     img{
+  //       width: 80px;
+  //     }
+  //   }
+  // }
+  
 }

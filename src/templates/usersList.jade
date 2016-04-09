@@ -1,7 +1,8 @@
-win-list-view#UsersListView(item-data-source="users | filter:search", selection="selection", selection-mode="'single'", tap-behavior="'directSelect'")
+win-list-view#UsersListView(item-data-source="users | filter:search")
   win-list-view-header
     h2.win-h2 GitHub Users List:
   win-item-template 
     include userItem
   win-list-layout
-  win-list-view-footer api.githup.com/users
+  win-list-view-footer 
+    a.win-link https://api.githup.com/users

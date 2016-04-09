@@ -9,10 +9,10 @@ mixin main
   <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
   <!--[if gt IE 8]><![endif]--> 
   
-  html(ng-app="churchdeskchallenge")
+  html
     head
       include head
-    body(ng-controller="usersCtrl")
+    body(ng-app="churchdeskchallenge", ng-controller="usersListController")
    
       if block
         block
