@@ -4,15 +4,15 @@
     
   usersServices.factory('Users', ['$resource', 
     function($resource) {
-      return $resource('/users.json', {}, {
+      return $resource('https://api.github.com/users', {}, {
                 query:{method:'GET', params:{ }, isArray: true}
               });
     }]);
   
   usersServices.factory('UserDetails', ['$resource', 
     function($resource) {
-      return $resource('https://api.github.com/users', {}, {
-                query:{method:'GET', params:{userLogin:"@login"}, isArray: true}
+      return $resource('https://api.github.com/users/:userLogin', {}, {
+                query:{method:'GET', params:{userLogin:"@login"}}
               });
     }]);
     

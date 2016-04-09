@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "connect-history-api-fallback": "^1.2.0",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-connect": "^2.3.1",
