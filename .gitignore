@@ -4,6 +4,7 @@ dist
 .sass-cache
 *.map
 bower_components
+typings
 bin/*
 bin/assets/components
 npm-debug.log
